@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script lang="javascript">
+        function print_number(){
+            // Get the input value
+            var numberInput = document.getElementById("number").value;
+            
+            
+            if (!isNaN(numberInput)) {
+                for(let i=1;i<=numberInput;i++){
+                    document.getElementById("result").innerHTML += i + " ";
+                }
+                // Display the number in the result div
+                
+            } else {
+                // Display an error message
+                document.getElementById("result").innerHTML = "Vui lòng nhập một số hợp lệ.";
+            }
+        }
+    </script>
+    <form action="">
+        Nhập số : <input type="text" id = "number">
+        <input type="button" value="In kết quả" onclick="print_number()">
+    </form>
+    <div id="result">
+
+    </div>
+</body>
+</html>
